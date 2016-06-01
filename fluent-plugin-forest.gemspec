@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 Gem::Specification.new do |gem|
   gem.name          = "fluent-plugin-forest"
-  gem.version       = "0.3.0"
+  gem.version       = "0.3.1"
   gem.authors       = ["TAGOMORI Satoshi"]
   gem.email         = ["tagomoris@gmail.com"]
   gem.description   = %q{create sub-plugin dynamically per tags, with template configuration and parameters}
@@ -16,5 +16,5 @@ Gem::Specification.new do |gem|
 
   gem.add_development_dependency "rake"
   gem.add_development_dependency "test-unit", "~> 3.1.7"
-  gem.add_runtime_dependency "fluentd"
+  gem.add_runtime_dependency "fluentd", "~> 0.12.0"
 end
