@@ -16,5 +16,9 @@ Gem::Specification.new do |gem|
 
   gem.add_development_dependency "rake"
   gem.add_development_dependency "test-unit", "~> 3.1.7"
-  gem.add_runtime_dependency "fluentd", "~> 0.12.0"
+  if defined?(RUBY_VERSION) && RUBY_VERSION < '2'
+    gem.add_runtime_dependency "fluentd", "< 0.14.0"
+  else
+    gem.add_runtime_dependency "fluentd"
+  end
 end
